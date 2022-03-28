@@ -1,0 +1,9 @@
+.clusterMap {
+    position: sticky;
+    top: 0;
+    background-color: black;
+}
+
+body {
+    background-color: aqua;
+}

@@ -1,0 +1,54 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <div class="container mb-3">
+            <h2 class="text-center">Create New Campground</h2>
+        </div>
+        <div class="col-6 offset-3">
+            <form action="/campgrounds" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+
+                <div class="container mt-2">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" id="title" name="campground[title]" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid title.
+                    </div>
+                </div>
+                <div class="container mt-2">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" id="location" name="campground[location]" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid location.
+                    </div>
+                </div>
+                <div class="container mt-2">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" id="price" name="campground[price]" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid price.
+                    </div>
+                </div>
+                <div class="container mt-2">
+                    <label for="formFile" class="form-label">Images</label>
+                    <input class="form-control" type="file" id="formFile" name="image" multiple required>
+                    <div class="invalid-feedback">
+                        Please add image(s).
+                    </div>
+                </div>
+                <div class="container mt-2">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea type="text" id="description" name="campground[description]" class="form-control"
+                        required></textarea>
+                    <div class="invalid-feedback">
+                        Please provide a valid description.
+                    </div>
+                </div>
+                <div class="container mt-4">
+                    <button class="btn btn-success">Creat Campground</button>
+                </div>
+            </form>
+            <div class="container mt-4 mb-4">
+                <a href="/campgrounds">Back to Index Page</a>
+            </div>
+        </div>
+
+    </div>
