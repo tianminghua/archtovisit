@@ -12,6 +12,7 @@ const flash = require('connect-flash')
 const passport = require('passport')
 const localStrategy = require('passport-local')
 const User = require('./models/user')
+const MongoStore = require('connect-mongo');
 
 // import Express Router
 const campgroundsRouter = require('./routes/campgrounds')
@@ -48,8 +49,23 @@ app.use(flash())
 
 app.use(express.static('public'))
 
+const store = MongoStore.create({
+    mongoUrl: process.env.MONGO_URL,
+    touchAfter: 24 * 3600,
+    crypto: {
+        secret: 'trythissecret'
+    },
+    autoRemove: 'native'
+})
+
+store.on("error", (e) => {
+    console.log("Sesstion Store Error", e)
+})
+
 // setup session in Express
 const sessionConfig = {
+    store,
+    name: 'session',
     secret: 'thisismysecret',
     resave: false,
     saveUninitialized: true,
@@ -104,7 +120,8 @@ app.use((err, req, res, next) => {
 
 })
 
-app.listen(3000, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
     console.log('$$$$$ listening on port 3000 $$$$$')
 })
 
