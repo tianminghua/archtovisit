@@ -8,8 +8,9 @@ const isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
         //store the URL where the user is directed from
         req.session.returnTo = req.originalUrl;
-        req.flash('warning', 'Please login!!!!!!!')
-        res.redirect('/login')
+        // req.flash('warning', 'Please login!!!!!!!')
+        // res.redirect('/login')
+        next();
     } else {
         next();
     }

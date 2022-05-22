@@ -5,7 +5,6 @@ const attractions = { features: JSON.parse(campgrounds) }
 let selected;
 if (select) {
     selected = { features: JSON.parse(select) }
-    console.log(selected)
 }
 
 
@@ -45,8 +44,7 @@ const map = new mapboxgl.Map({
 });
 
 for (const marker of attractions.features) {
-    const urls = marker.images[0].url.split('upload/')
-    const url = `${urls[0]}upload/bo_10px_solid_rgb:ffffff,c_thumb,h_200,r_100,w_200/${urls[1]}`
+    const url = marker.circleURL;
     // Create a DOM element for each marker.
     const el = document.createElement('div');
     let width = 50;

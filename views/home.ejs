@@ -17,7 +17,7 @@
                 <h3 class="float-md-left mb-0">ARCHtoVISIT</h3>
                 <nav class="nav nav-masthead justify-content-center float-md-right">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="/campgrounds">Attractions</a>
+                    <a class="nav-link" href="/campgrounds/all">Attractions</a>
                     <% if(!currentUser) { %>
                         <a class="nav-link" href="/login">Login</a>
                         <a class="nav-link" href="/register">Register</a>
@@ -33,21 +33,21 @@
                 US. <br>
                 Enjoy the beauty and story of each building!</p>
 
-            <div>
+            <div id="cities">
                 <p class="lead"> Explore Popular Cities </p>
-                <a href="/campgrounds?city=Seattle"
-                    class="btn btn-lg btn-outline-light font-weight-bold border-white">Seattle</a>
-                <a href="/campgrounds?city=Boston"
+                <a href="/campgrounds?city=Seattle" id="Seattle"
+                    class="btn btn-lg btn-outline-light font-weight-bold">Seattle</a>
+                <a href="/campgrounds?city=Boston" id="Boston"
                     class="btn btn-lg btn-outline-light font-weight-bold border-white">Boston</a>
-                <a href="/campgrounds?city=New York"
+                <a href="/campgrounds?city=New York" id="NewYork"
                     class="btn btn-lg btn-outline-light font-weight-bold border-white">New
                     York</a>
-                <a href="/campgrounds?city=San Francisco"
+                <a href="/campgrounds?city=San Francisco" id="SanFrancisco"
                     class="btn btn-lg btn-outline-light font-weight-bold border-white">San Francisco</a>
             </div>
             <br>
             <p>Or</p>
-            <a href="/campgrounds" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
+            <a href="/campgrounds/all" class="btn btn-md btn-secondary font-weight-bold border-white bg-white">View
                 All Attractions</a>
             <br>
 

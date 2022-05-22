@@ -5,19 +5,14 @@
             <div class="col-6">
 
                 <h2>
-                    Explore <%= city %>
+                    Explore <%= city.city %>
                 </h2>
-                <h6>Washington (WA), United States</h6>
+                <h6>
+                    <%= city.location %>
+                </h6>
                 <div class="w-75 p-3">
-                    <p>In Seattle you simply can’t skip the Central Public Library – a modern architectural marvel of
-                        glass
-                        grids, unusual shapes, and a “book spiral” that climbs four stories. Stroll over to Pike Place
-                        Market to visit the original Starbucks and play catch with a fishmonger. In the heart of the
-                        city
-                        lies Chihuly Garden and Glass, which will dazzle you with its colorful and delicate works. Glide
-                        to
-                        the top of the Space Needle for panoramic views of the surrounding mountain ranges and Puget
-                        Sound.
+                    <p>
+                        <%= city.description %>
                     </p>
                 </div>
                 <div class="row">
@@ -59,7 +54,7 @@
     <script>
         const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
         const campgrounds = `<%- JSON.stringify(campgrounds) %>`
-        const city = '<%- city %>'
+        const city = '<%- city.city %>'
         const select = null;
 
     </script>

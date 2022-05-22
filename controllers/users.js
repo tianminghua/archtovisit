@@ -13,7 +13,7 @@ module.exports.register = async (req, res) => {
         if (err) return next(err)
     })
     req.flash('success', `Welcome, ${newUser.username}`)
-    res.redirect('/campgrounds')
+    res.redirect('/')
 }
 
 module.exports.renderLogin = (req, res) => {
@@ -27,7 +27,7 @@ module.exports.login = (req, res) => {
         delete req.session.returnTo
         res.redirect(newUrl)
     } else {
-        res.redirect('/campgrounds')
+        res.redirect('/')
     }
 
 }
@@ -35,5 +35,5 @@ module.exports.login = (req, res) => {
 module.exports.logout = (req, res) => {
     req.logOut()
     req.flash('success', 'Goodbye~~~~~')
-    res.redirect('/campgrounds')
+    res.redirect('/')
 }

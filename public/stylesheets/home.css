@@ -1,36 +1,93 @@
 body {
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1531591022136-eb8b0da1e6d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80");
+        url("https://images.unsplash.com/photo-1531591022136-eb8b0da1e6d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80");
     background-size: cover;
     background-position: center;
     text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
+
 .cover-container {
-  max-width: 60vw;
+    max-width: 60vw;
 }
 
 .nav-link {
     padding: 0.25rem 0;
     font-weight: 500;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     margin-left: 1rem;
     border-bottom: 0.25rem solid transparent;
 }
 
-.nav-link:hover{
-    color: rgba(255,255,255,0.5);
-    border-bottom-color:rgba(255,255,255,0.5);
+.nav-link:hover {
+    color: rgb(255, 255, 255);
+    border-bottom-color: rgba(255, 255, 255, 0.5);
 }
 
 .nav-link.active {
     color: white;
-    border-bottom-color:white;
+    border-bottom-color: white;
 
 }
 
-.btn-secondary, .btn-secondary:hover{
+.btn-secondary,
+.btn-secondary:hover {
     color: #333;
     text-shadow: none;
+}
+
+.btn-lg {
+    height: 200px;
+    width: 200px;
+    font-size: 0;
+    padding-top: 75px;
+}
+
+
+
+#Seattle {
+    background-image: url(https://res.cloudinary.com/madsky/image/upload/c_fill,h_200,w_200/v1650044715/attractions/rawImage_gof8lc.jpg);
+}
+
+#Boston {
+    background-image: url(https://res.cloudinary.com/madsky/image/upload/c_fill,h_200,w_200/v1650401167/attractions/istockphoto-894559888-170667a_lxxsaj.jpg);
+}
+
+#NewYork {
+    background-image: url(https://res.cloudinary.com/madsky/image/upload/c_fill,h_200,w_200/v1650401237/attractions/new-york-city-evening-NYCTG0221_dbc6zc.jpg);
+}
+
+#SanFrancisco {
+    background-image: url(https://res.cloudinary.com/madsky/image/upload/c_fill,h_200,w_200/v1650401290/attractions/PaintedLadies_0_mpbfbq.jpg);
+}
+
+#Seattle:hover {
+    background-image: url(https://res.cloudinary.com/madsky/image/upload/b_rgb:000000,c_fill,h_200,o_40,w_200/v1650044715/attractions/rawImage_gof8lc.jpg);
+}
+
+#Boston:hover {
+    background-image: url(https://res.cloudinary.com/madsky/image/upload/b_rgb:000000,c_fill,h_200,o_40,w_200/v1650401167/attractions/istockphoto-894559888-170667a_lxxsaj.jpg);
+}
+
+#NewYork:hover {
+    background-image: url(https://res.cloudinary.com/madsky/image/upload/b_rgb:000000,c_fill,h_200,o_40,w_200/v1650401237/attractions/new-york-city-evening-NYCTG0221_dbc6zc.jpg);
+}
+
+#SanFrancisco:hover {
+    background-image: url(https://res.cloudinary.com/madsky/image/upload/b_rgb:000000,c_fill,h_200,o_40,w_200/v1650401290/attractions/PaintedLadies_0_mpbfbq.jpg);
+}
+
+.btn-lg:hover {
+    font-size: x-large;
+    color: white;
+}
+
+#cities {
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.px-3 {
+    padding-top: 100px;
 }
